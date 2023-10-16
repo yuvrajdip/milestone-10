@@ -1,21 +1,21 @@
 const express = require('express')
 const app = express()
-const port = process.env.PORT || 5000 ;
+
+const port = process.env.PORT || 5001 ;
 
 const users = [
-  { id:1 , name : 'Sabana', email : 'Sabana@gmail.com'},
-  { id:2 , name : 'Sabina', email : 'Sabina@gmail.com'},
-  { id:3 , name : 'Safana', email : 'Safana@gmail.com'},
+  {id:1 , name : "Sabina", email : "sabina@gmail.com"},
+  {id:2 , name : "Safina", email : "safina@gmail.com"}
 ]
 
-app.get('/', (req,res)=>{
-  res.send('Hello World!!!')
+app.get('/',(req,res)=>{
+  res.send('Users tututututut')
 })
 
-app.get('/users', (req,res)=>{
-  res.send(users);
+app.get('/users',(req,res)=>{
+  res.send(users)
 })
 
-app.listen(port , ()=>{
+app.listen(port, ()=> {
   console.log(`Server is running on ${port}`)
 })
